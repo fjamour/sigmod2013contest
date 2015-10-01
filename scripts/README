@@ -1,0 +1,13 @@
+Scripts that run on the web server machine and the evaluation server.
+
+The configuration scripts/information required for each script are described.
+
+
+Scripts should store logs of everything done in a log file.
+Scripts should read parameters from file/user parameters
+
+
+NOTES:
+1. It's assumed that no two submissions will ever have the same timestamp (no two submissions in the same second)
+   this should be implemented in the PHP side
+

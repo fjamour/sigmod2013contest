@@ -1,0 +1,36 @@
+==================================================================
+******************************************************************
+Welcome to backup script!
+The values of the parameters are:
+[BACKUP_PATH]:			/home/fuad/scratch/sigmod-backups/
+[SUBMISSIONS_BACKUP_PATH]:	/home/fuad/scratch/sigmod-backups/bu_submissions/
+[WEB_SUBMISSIONS_PATH]:		/var/www/html/sigmod-pilot/submissions/
+[SLEEP_TIME]:			60
+[EVAL_USER]:			fuad
+[EVAL_HOST]:			10.126.144.130
+[DB_EVAL_USER]:			evaluser
+[DB_EVAL_PASS]:			123
+[DB_EVAL_DBNAME ]:		evaldb
+[WEB_USER]:			jamourft
+[WEB_HOST]:			10.254.33.130
+[DB_WEB_USER]:			webuser
+[DB_WEB_PASS]:			123
+[DB_WEB_DBNAME]:		webdb
+******************************************************************
+==================================================================
+==================================================================
+Getting backups..
+------------------------------------------------------------------
+Getting db backup using ssh...
+host: [10.254.33.130]
+db_name: [webdb]
+file_path: [/home/fuad/scratch/sigmod-backups/1366118965-web_db_bu.sql]
+ssh jamourft@10.254.33.130 mysqldump -uwebuser -p123 webdb > /home/fuad/scratch/sigmod-backups/1366118965-web_db_bu.sql
+------------------------------------------------------------------
+Getting submissions backup using rsync...
+host: [10.254.33.130]
+remote_folder: [/var/www/html/sigmod-pilot/submissions/]
+folder_path: [/home/fuad/scratch/sigmod-backups/bu_submissions/]
+rsync --recursive --update --verbose jamourft@10.254.33.130:/var/www/html/sigmod-pilot/submissions/ /home/fuad/scratch/sigmod-backups/bu_submissions/
+==================================================================
+[Tue Apr 16 16:29:27 2013] Will take another backup after 60 minutes.

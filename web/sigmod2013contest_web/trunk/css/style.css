@@ -1,0 +1,267 @@
+/*
+ * Dan Rowden @ KAUST
+ * Adapted from Less Framework 4
+ */
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+figure {position: relative;}
+figure img {width: 100%;}
+
+
+/*	Typography presets
+	------------------	*/
+@font-face {
+	font-family: 'Rotis Sans Serif';
+	src: url('fonts/rotissansserif-webfont.eot');
+	src: local('☺'), url('fonts/rotissansserif-webfont.ttf') format('truetype'), url('fonts/rotissansserif-webfont.svg#webfontebW431Ai') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Rotis Sans Serif';
+	src: url('fonts/rotissansserif-bold-webfont.eot');
+	src: local('☺'), url('fonts/rotissansserif-bold-webfont.ttf') format('truetype'), url('fonts/rotissansserif-bold-webfont.svg#webfontDLXVzw76') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Rotis Sans Serif';
+	src: url('fonts/rotissansserif-italic-webfont.eot');
+	src: local('☺'), url('fonts/rotissansserif-italic-webfont.ttf') format('truetype'), url('fonts/rotissansserif-italic-webfont.svg#webfontibVCaaYb') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Rotis Serif';
+	src: url('fonts/rotisserif-webfont.eot');
+	src: local('☺'), url('fonts/rotisserif-webfont.ttf') format('truetype'), url('fonts/rotisserif-webfont.svg#webfontmZGdEKVR') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Rotis Serif';
+	src: url('fonts/rotisserif-bold-webfont.eot');
+	src: local('☺'), url('fonts/rotisserif-bold-webfont.ttf') format('truetype'), url('fonts/rotisserif-bold-webfont.svg#webfontjfLdcIZ0') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body { font: 18px/1.2em Rotis Sans Serif, san-serif; color: #111; background: #dedede; text-align: center; width: 980px; margin: 14px auto; }
+
+h1, h2, h3, h4, h5 { font-weight: normal; line-height: 1.1em; }
+section h1, section h2 { margin: 21px 0 14px 0; }
+
+section h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+section h2 {
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+a { color: #1c8b8d; text-decoration: none; }
+a:hover, a:focus { color: #27b2b5; }
+a:visited { color: #1c8b8d; }
+
+p+p, p+blockquote, p+ul, ul+p, iframe, iframe+p { margin-top: 18px; }
+*+table, table+*, ul+ul { margin-top: 20px; }
+
+.clear { clear: both; }
+
+
+
+header {
+    margin: 14px 0;
+    background: #fff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+header .logo {
+    float: ;
+    position: relative;
+    left: 10px;
+    top: 18px;
+    width: 287px;
+    height: 83px;
+    background: url(../images/header-kaust.jpg) no-repeat;
+    text-indent: -999px;
+}
+
+header h1 {
+    float: right;
+    margin-right: 26px;
+    position: relative;
+    top: -30px;
+    font-weight: normal;
+}
+
+nav {
+    overflow: hidden;
+    width: 100%;
+    background: #5087c3;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul {
+    margin-left: 10px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    float: left;
+    padding: 10px 14px 12px;
+    background: #5087c3;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul li a:visited {
+    color: #fff;
+}
+nav ul li a:hover, nav ul li.active a {
+    background: #7ea8d6;
+    color: #fff;
+}
+
+#main {
+    padding: 25px;
+    text-align: left;
+    border: 1px solid #c6c6c6;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#main table td {
+    padding: 10px;
+    background: #f0eee2;
+    border: 1px solid #fff;
+}
+
+#main table.no_background td {
+    background: none;
+}
+
+.logos {
+    margin: 20px 0 40px;
+}
+.logos img {
+    margin-right: 30px;
+}
+.logos img:first-of-type {
+    margin-right: 45px; /* FUAD: was 60px */
+}
+
+footer {
+    margin-top: 10px;
+    margin-left: 26px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/*Added by FUAD*/
+#error_style {
+	color: rgb(255,0,0);
+	vertical-align: top;
+}
+
+#main table.dashboard {
+    background: none;
+	width:100%;
+	margin:0 auto;
+	border-collapse: collapse;
+	border: 2px solid #999;
+}
+
+#main table.dashboard td {
+	background: #f0eee2;
+	border: 2px solid #999;
+	padding: 5px;
+}
+
+#main table.dashboard td.passed {
+	background: #D8FCD5;
+}
+
+#main table.dashboard td.failed {
+	background: #FFDFDF;
+}
+
+#main table.dashboard td.final {
+	background: #93ada1;
+}
+
+#main table.dashboard th {
+	background-color:#CCC;
+	text-align:center;
+	border: 2px solid #999;
+	padding: 5px;
+}
+
+#main table.leaderboard {
+    background: none;
+	width:100%;
+	margin:0 auto;
+	border-collapse: collapse;
+	border: 2px solid #999;
+}
+
+#main table.leaderboard td {
+	background: rgb(255,255,255);
+	border: 2px solid #999;
+	padding: 5px;
+	border:1px solid #999;
+	padding:9px 15px;
+}
+
+#main table.leaderboard th {
+	background-color:#CCC;
+	text-align:center;
+	border: 2px solid #999;
+	padding: 5px;
+}
+
+#main .flag {
+	margin-top: -3px;
+	border: none;
+	vertical-align: middle;
+}
+
+#main .bar {
+	background:#EFF5FF;
+	padding: 5px 0px;
+	margin: 0px 0px;
+}
+
+

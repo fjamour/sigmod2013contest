@@ -1,0 +1,11 @@
+Scripts to produce libcore.so from a compressed folder (.tar.gz) of source code.
+
+make-makefile.sh <folder-name>: folder-name is the name of the folder with the source code in it
+                                this script produces a Makefile to compile all the source code in 
+                                folder-name. All folders under folder-name are passed to GCC as 
+                                include directories
+                               
+make-lib <work-dir> <impl-path>: work-dir is where the final shared library will be stored
+                                 impl-path is path to impl.tar.gz that has the source code in it
+                                 assumes that make-makefile.sh is in the same folder
+                                 assumes that the parent folder is the sigmod2013package

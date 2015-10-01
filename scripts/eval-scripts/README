@@ -1,0 +1,12 @@
+Scripts here are responsible for doing the execution of a submission and storing the results
+for the web server to pull them.
+
+For example could work this way:
+1. assumes that new submissions (.SO files or source code) are pushed to some folder
+2. checks for new submissions based on the timestamp of a submission 
+3. for a new submission, the results (all textual) are stored in a database for web-server to pull
+4. all the results including (passed/failed/throughput/runtime/any other details) are just stored in a string
+5. the web-server then pulls the textual file and parses it to get all what it needs
+6. the format of the output result would be defined clearly in a file or something
+   so that no confusion is introduced at the web-server side when parsing the results
+

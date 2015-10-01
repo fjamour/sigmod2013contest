@@ -1,0 +1,16 @@
+test.cpp has been modified to enable encrypting the last document.
+you should firt modify the test data with gen_hack.cpp
+
+gen_hack fname `tail -1 fname | grep cut -f2 -d' '`
+mv res_sol.txt fname_new
+
+then
+testdriver fname `tail -1 fname | grep cut -f2 -d' '`
+
+
+
+
+================
+
+test_through.cpp has the throughput calculation version of testdriver (with no last line encryption)
+

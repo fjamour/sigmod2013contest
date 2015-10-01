@@ -1,0 +1,22 @@
+Scripts here are responsible for getting the submissions from whereever Apache
+stores them, copies them to evaluation machine and waits for results.
+
+1. the script looks for new submissions based on timestamps
+2. copies any new submission to the evaluation server
+3. pulls what ever new results available on the evaluation machine
+4. updates the submissions table with the results pulled from evaluation
+   machine database
+
+
+
+
+STEPS:
+1. do: (to get passwordless access to the evaluation machine which is needed for push-submissions-1.py) 
+>ssh-keygen
+>ssh-copy-id fuad@10.126.144.130
+>ssh-add (if necessary)
+
+
+TODOs:
+1. notify by email if errors happen
+2. write errors to a log file (or may be simply direct stdout to a log file?)

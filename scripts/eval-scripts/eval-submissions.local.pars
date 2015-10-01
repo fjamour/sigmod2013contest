@@ -1,0 +1,38 @@
+#==============================================================================
+# Globals. No config file, to update them modify them in the script (here)
+#==============================================================================
+# path to expect new submissions at
+SUBMISSIONS_PATH = "/home/fuad/scratch/eval-submissions/"
+
+# timestamp of the last evaluated submission
+LAST_TIMESTAMP = 0
+
+# period of checking for new results (in minutes)
+SLEEP_TIME = 0.5
+
+# details of the raw results database (local)
+DB_HOST        = "localhost"
+DB_USER        = "dbuser"
+DB_PASS        = "123"
+DB_DBNAME      = "resdb"
+DB_RESTBL      = "raw_res_table"
+# max number of characters to get from stdout/stderr
+DB_MAX_FILE_SZ = 2048      
+
+# execution parameters
+# directory where the tester package
+TESTER_DIR        = "/home/fuad/Desktop/sigmod2013contest/scripts/eval-scripts/sigmod2013tester/"
+# directory where to do execution
+WORK_DIR          = "/home/fuad/Desktop/sigmod2013contest/scripts/eval-scripts/work-dir/"
+# max allowed runtime for small data test
+MAX_RUNTIME_SMALL = 30                    # 30
+# max allowed runtime for big data test
+MAX_RUNTIME_BIG   = 30                    # 300
+# max allowed runtime for new data
+MAX_RUNTIME_NEW   = 30                    # 600
+# max allowed time on small data to run big data                           
+MAX_TIME_TO_RUN_BIGTEST = 10              # 20
+# max allowed time on big data to run new data
+MAX_TIME_TO_RUN_NEWTEST = 30              # 30
+#==============================================================================
+

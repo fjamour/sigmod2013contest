@@ -1,0 +1,44 @@
+ACM SIGMOD 2013 Programming Contest Submission System
+Fuad Jamour <fuad.jamour@kaust.edu.sa>
+
+In this file you'll find useful information on how the submission system works, 
+and what to modify to customize it.
+
+
+----------------------------------------------
+-                  Overview                  -
+----------------------------------------------
+There are scripts to be run on a web server, an evaluation server (the machine that will run the submissions), 
+and a backup server. I was using my own machine as a backup server.
+
+Your machine must have passwordless ssh access to both the web server and the evaluation server.
+The web server must have passwordless ssh to the evaluation server, and access to a mysql database
+on the evaluation server. The evaluation server is assumed not to have access to any machine, 
+in our setup that was the case to make sure that if a submission messes up, only the evaluation server
+is affected and no other machine in our network is affected. Worst thing is evaluation server
+goes down and we reflash it.
+
+----------------------------------------------
+-                  Contents                  -
+----------------------------------------------
+  - doc                    documents that describe some orginazational aspects
+  - package                the 2013 contest package (header and model implementation)
+  - scripts                submission system scripts
+  - web                    php scripts to generate the website
+
+                                  
+----------------------------------------------
+-               Getting started              -
+----------------------------------------------
+To set up a machine to be a web server do the following:
+(assume WEB_IP is the ip address of the web server)
+1. ssh-copy-id USERNAME@WEB_IP
+(your machine must have passwordless access to the web server for the auto deployment scripts to work)
+2. go to scripts/deployment-scripts-2014/init-params.sh and modify the parameters 
+3. change directory to scripts/deployment-scripts-2014 and run 'bash start-web-1.sh'
+(this will copy all the web server scripts, do proper permission changes and run the scripts)
+
+To set up a machine to be an evaluation server do the same steps for the web server but run 
+'bash start-eval-1.sh' instead.
+
+
