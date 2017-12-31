@@ -1,1 +1,0 @@
-# sigmod2013contest
